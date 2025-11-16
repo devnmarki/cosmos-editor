@@ -2,45 +2,48 @@
 
 namespace cosmos
 {
-	Window::Window(const WindowSpecification& specs)
-		: m_Specs(specs), m_Handle(nullptr), m_Renderer(nullptr)
+	namespace core
 	{
-
-	}
-
-	Window::~Window()
-	{
-		if (m_Renderer)
-			SDL_DestroyRenderer(m_Renderer);
-
-		if (m_Handle)
-			SDL_DestroyWindow(m_Handle);
-	}
-
-	void Window::Create()
-	{
-		m_Handle = SDL_CreateWindow(m_Specs.title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, m_Specs.width, m_Specs.height, SDL_WINDOW_SHOWN);
-		if (!m_Handle)
+			Window::Window(const WindowSpecification & specs)
+			: m_Specs(specs), m_Handle(nullptr), m_Renderer(nullptr)
 		{
-			std::cout << "Failed to create SDL Window. Error: " << SDL_GetError() << std::endl;
-			return;
+
 		}
 
-		m_Renderer = SDL_CreateRenderer(m_Handle, -1, SDL_RENDERER_ACCELERATED);
-		if (!m_Renderer)
+		Window::~Window()
 		{
-			std::cout << "Failed to create SDL Renderer. Error: " << SDL_GetError() << std::endl;
-			return;
+			if (m_Renderer)
+				SDL_DestroyRenderer(m_Renderer);
+
+			if (m_Handle)
+				SDL_DestroyWindow(m_Handle);
 		}
-	}
 
-	SDL_Window* Window::GetHandle() const
-	{
-		return m_Handle;
-	}
+		void Window::Create()
+		{
+			m_Handle = SDL_CreateWindow(m_Specs.title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, m_Specs.width, m_Specs.height, SDL_WINDOW_SHOWN);
+			if (!m_Handle)
+			{
+				std::cout << "Failed to create SDL Window. Error: " << SDL_GetError() << std::endl;
+				return;
+			}
 
-	SDL_Renderer* Window::GetRenderer() const
-	{
-		return m_Renderer;
+			m_Renderer = SDL_CreateRenderer(m_Handle, -1, SDL_RENDERER_ACCELERATED);
+			if (!m_Renderer)
+			{
+				std::cout << "Failed to create SDL Renderer. Error: " << SDL_GetError() << std::endl;
+				return;
+			}
+		}
+
+		SDL_Window* Window::GetHandle() const
+		{
+			return m_Handle;
+		}
+
+		SDL_Renderer* Window::GetRenderer() const
+		{
+			return m_Renderer;
+		}
 	}
 }

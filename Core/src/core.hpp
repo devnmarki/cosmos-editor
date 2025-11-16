@@ -1,11 +1,3 @@
 #pragma once
 
-//-------------------------------
-// Utils
-//-------------------------------
-#include "utils/memory_utils.hpp"
-
-//-------------------------------
-// Core
-//-------------------------------
-#include "window.hpp"
+#include "application.hpp"
