@@ -8,6 +8,7 @@ endif()
 project (CosmosEditor)
 
 add_subdirectory(vendor/SDL2)
+add_subdirectory(vendor/imgui)
 
 add_subdirectory (CosmosEditor)
 

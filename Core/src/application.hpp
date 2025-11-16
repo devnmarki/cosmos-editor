@@ -4,6 +4,9 @@
 #include <vector>
 
 #include <SDL.h>
+#include <imgui.h>
+#include <imgui_impl_sdl2.h>
+#include <imgui_impl_opengl3.h>
 
 #include "utils/memory_utils.hpp"
 #include "window.hpp"

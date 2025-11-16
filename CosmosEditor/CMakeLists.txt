@@ -19,6 +19,8 @@ target_link_libraries(${PROJECT_NAME}
         Core
         SDL2
         SDL2main
+        imgui
+        opengl32
 )
 
 add_custom_command(TARGET CosmosEditor POST_BUILD

@@ -21,6 +21,8 @@ target_link_libraries(Core
     PUBLIC
         SDL2
         SDL2main
+        imgui
+        opengl32
 )
 
 add_custom_command(TARGET Core POST_BUILD

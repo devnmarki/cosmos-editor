@@ -20,6 +20,8 @@ namespace cosmos
 
 		Application::~Application()
 		{
+			SDL_Quit();
+
 			s_Instance = nullptr;
 		}
 
@@ -35,6 +37,8 @@ namespace cosmos
 			float deltaTime = 0.0f;
 
 			SDL_Event event;
+
+			IMGUI_CHECKVERSION();
 			
 			while (m_IsRunning)
 			{
