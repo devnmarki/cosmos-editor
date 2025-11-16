@@ -17,9 +17,13 @@ namespace cosmos
 	{
 	public:
 		Window(const WindowSpecification& specs);
+		~Window();
 
 		void Create();
 		
+		SDL_Window* GetHandle() const;
+		SDL_Renderer* GetRenderer() const;
+
 	private:
 		WindowSpecification m_Specs;
 
