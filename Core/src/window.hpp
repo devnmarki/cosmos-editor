@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+#include <SDL.h>
+
 namespace cosmos
 {
 	struct WindowSpecification
@@ -20,5 +22,8 @@ namespace cosmos
 		
 	private:
 		WindowSpecification m_Specs;
+
+		SDL_Window* m_Handle;
+		SDL_Renderer* m_Renderer;
 	};
 }

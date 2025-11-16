@@ -1,6 +1,6 @@
 #include "application.hpp"
 
-int main()
+int main(int argc, char* argv[])
 {
 	cosmos::ApplicationSpecification appSpecs;
 	appSpecs.name = "Cosmos Editor";
