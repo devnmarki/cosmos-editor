@@ -1,5 +1,6 @@
 #include "core.hpp"
 #include "layers/editor_layer.hpp"
+#include "layers/editor_ui_layer.hpp"
 
 int main(int argc, char* argv[])
 {
@@ -10,6 +11,7 @@ int main(int argc, char* argv[])
 
 	cosmos::core::Application app(appSpecs);
 	app.PushLayer<cosmos::EditorLayer>();
+	app.PushLayer<cosmos::EditorUILayer>();
 	app.Run();
 
 	return 0;

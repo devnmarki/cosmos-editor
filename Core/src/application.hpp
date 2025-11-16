@@ -29,6 +29,7 @@ namespace cosmos
 			~Application();
 
 			void Run();
+			void Stop();
 
 			template<typename TLayer, typename... Args>
 			requires(std::is_base_of_v<Layer, TLayer>)

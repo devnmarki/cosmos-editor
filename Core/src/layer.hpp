@@ -16,6 +16,7 @@ namespace cosmos
 			virtual void OnAttach() {}
 			virtual void OnUpdate(float dt) {}
 			virtual void OnRender() {}
+			virtual void OnGuiRender() {}
 			virtual void OnEvent(SDL_Event& event) {}
 
 			template<std::derived_from<Layer> T, typename... Args>
