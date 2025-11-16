@@ -1,0 +1,67 @@
+# --- Build folders ---
+build/
+build-debug/
+build-release/
+out/
+bin/
+obj/
+lib/
+
+# --- CMake ---
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+*.cmake
+Makefile
+*.ninja
+*.ninja_deps
+*.ninja_log
+
+# --- Visual Studio / VSCode ---
+.vscode/
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# --- CLion / JetBrains ---
+.idea/
+
+# --- Windows / OS junk ---
+Thumbs.db
+Desktop.ini
+
+# --- Compiled binaries ---
+*.exe
+*.dll
+*.so
+*.dylib
+*.lib
+*.a
+*.pdb
+
+# --- Intermediate objects ---
+*.o
+*.obj
+
+# --- Logs ---
+*.log
+
+# --- SDL2 / Third-party libs (if vendored) ---
+# Remove the "thirdparty" line if you want to track some libs manually
+thirdparty/
+external/
+
+# --- Cache / Generated files from your Level Editor ---
+*.cache
+*.tmp
+
+# --- User-specific settings ---
+*.user
+*.ini
+
+# --- Exported builds ---
+export/
+dist/
+release/
