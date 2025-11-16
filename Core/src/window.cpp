@@ -36,6 +36,21 @@ namespace cosmos
 			}
 		}
 
+		void Window::Clear(const utils::Color& clearColor)
+		{
+			SDL_SetRenderDrawColor(m_Renderer, clearColor.r, clearColor.g, clearColor.b, clearColor.a);
+		}
+
+		void Window::BeginFrame()
+		{
+			SDL_RenderClear(m_Renderer);
+		}
+
+		void Window::EndFrame()
+		{
+			SDL_RenderPresent(m_Renderer);
+		}
+
 		SDL_Window* Window::GetHandle() const
 		{
 			return m_Handle;

@@ -14,7 +14,7 @@ namespace cosmos
 			virtual ~Layer() = default;
 
 			virtual void OnAttach() {}
-			virtual void OnUpdate() {}
+			virtual void OnUpdate(float dt) {}
 			virtual void OnRender() {}
 			virtual void OnEvent(SDL_Event& event) {}
 

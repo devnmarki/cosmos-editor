@@ -4,6 +4,8 @@
 
 #include <SDL.h>
 
+#include "utils/utils.hpp"
+
 namespace cosmos
 {
 	namespace core
@@ -22,6 +24,10 @@ namespace cosmos
 			~Window();
 
 			void Create();
+
+			void Clear(const utils::Color& clearColor);
+			void BeginFrame();
+			void EndFrame();
 
 			SDL_Window* GetHandle() const;
 			SDL_Renderer* GetRenderer() const;

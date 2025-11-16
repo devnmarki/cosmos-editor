@@ -8,6 +8,6 @@ namespace cosmos
 	{
 	public:
 		void OnAttach() override;
-		void OnUpdate() override;
+		void OnUpdate(float dt) override;
 	};
 }

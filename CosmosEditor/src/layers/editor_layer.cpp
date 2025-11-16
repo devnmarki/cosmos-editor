@@ -8,7 +8,7 @@ namespace cosmos
 		std::cout << "EditorLayer Attached!" << std::endl;
 	}
 
-	void EditorLayer::OnUpdate()
+	void EditorLayer::OnUpdate(float dt)
 	{
 
 	}
